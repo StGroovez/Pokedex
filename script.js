@@ -68,7 +68,7 @@ function getPokemon(id){
             })
             for (let i = 0; i < poke.moves.length; i++) {
                 Bulbasaur.moves = Bulbasaur.moves + poke.moves[i].move.name + '. '
-                if(i === 12){
+                if(i === 5){
                     break;
                 }
             }
