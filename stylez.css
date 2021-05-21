@@ -57,6 +57,8 @@ table {
     border: 3px solid rgb(186, 155, 72); /* creates padding around scroll thumb */
   }
 
+/*  Main Wrappers   */
+
 .blackHole{
     background-color: rgb(105, 105, 105);
     width:100%;
@@ -95,6 +97,18 @@ table {
     border: 3px solid black;
 }
 
+.logoWrapper{
+    width: 604px;
+    height: 180px;
+}
+
+.logo{
+    width: 100%;
+    height:100%; 
+}
+
+/*  Screen Styles   */
+
 .screen{
     width:711px;
     height:663px;
@@ -108,16 +122,7 @@ table {
     border: 3px solid black;
 }
 
-.logoWrapper{
-    width: 604px;
-    height: 180px;
-}
-
-.logo{
-    width: 100%;
-    height:100%;
-    
-}
+/*  Pokémon Profile, Info, list   */
 
 .pokemonInfoWrapper{
     width: 320px;
@@ -126,7 +131,6 @@ table {
     border: 5px solid rgb(218, 218, 218);
     border-radius: 10px;
     box-shadow: inset 0px 10px 10px 10px rgba(0, 0, 0, 0.5);
-
 }
 
 .pokemonInfo{
@@ -180,10 +184,6 @@ table {
     align-items:flex-start;
 }
 
-li{
-    margin-bottom:15px;
-}
-
 .pokemonList{
     width: 300px;
     height: 590px;
@@ -209,6 +209,31 @@ li{
     background-color: rgb(255, 250, 113);
     cursor:pointer;
 }
+
+.searchInputWrapper{
+    display:none;
+    position:absolute;
+    top:300px;
+    width:200px;
+    height:100px;
+    border-radius: 16px;
+    border:2px solid black;
+    background-color:royalblue;
+    box-shadow: 0px 10px 15px 10px rgba(0, 0, 0, 0.6);
+    background-color: rgb(235, 228, 45);
+
+}
+
+.searchText{
+    margin-top: 10px;
+    font-weight: bolder;
+}
+
+.searchInput{
+    width:50%;
+}
+
+/*  Control Styles   */
 
 .controlWrapper{
     height: 363px;
@@ -379,25 +404,366 @@ li{
     margin-bottom: 70px;
 }
 
-.searchInputWrapper{
-    display:none;
-    position:absolute;
-    top:300px;
-    width:200px;
-    height:100px;
-    border-radius: 16px;
-    border:2px solid black;
-    background-color:royalblue;
-    box-shadow: 0px 10px 15px 10px rgba(0, 0, 0, 0.6);
-    background-color: rgb(235, 228, 45);
+/*JavaScript HTML Style*/
 
+li{
+    margin-bottom:15px;
 }
 
-.searchText{
-    margin-top: 10px;
-    font-weight: bolder;
+.boldProfile{
+    font-weight:bold; 
+    font-size:22px; 
+    border-bottom: 2px solid black; 
+    margin-top: 20px; 
+    width:260px; 
+    text-align:center; 
 }
 
-.searchInput{
-    width:50%;
+.boldInfo{
+    font-weight:bold; 
+    display:inline;
+}
+
+/* Responsive Design*/
+
+@media (max-width: 768px){
+    .blackHole{
+        width:100%;
+        height:700px;
+    }
+
+    .gameBody{
+        width:360px;
+        height:640px;
+        margin-top: 20px;
+        background-color:rgba(96, 58, 159);
+        border-top-left-radius:9px;
+        border-top-right-radius:9px;
+        border-bottom-left-radius: 25px;
+        border-bottom-right-radius: 25px;
+        border: 2px solid black;
+    }
+
+    /* INSIDE */
+
+    .screenWrapper{
+        width:332px;
+        height:322px;
+        margin-top: 10px;
+        background-color: rgb(63, 61, 72);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border-radius: 20px;
+        box-shadow: inset 0px 2px 2px 5px rgba(0, 0, 0, 0.3);
+        border: 2px solid black;
+    }
+
+    .logoWrapper{
+        width: 213px;
+        height: 59px;
+    }
+    
+    .logo{
+        width: 100%;
+        height:100%; 
+    }
+
+    .screen{
+        width:244px;
+        height:235px;
+        background: url("fondo.png");
+        margin-top: 30px;
+        box-shadow: inset 10px 10px 100px 20px rgba(0,0,0,10), -100px -100px 2px 3px rgba(0, 0, 0, 0);;
+        border-radius: 15px;
+        display:flex;
+        align-items: center;
+        justify-content: space-around;
+        border: 2px solid black;
+    }
+
+    .pokemonInfoWrapper{
+        width: 108px;
+        height: 211px;
+        margin-left: 18px;
+        border: 2px solid rgb(218, 218, 218);
+        border-radius: 10px;
+        box-shadow: inset 0px 10px 10px 10px rgba(0, 0, 0, 0.5);
+    }
+    
+    .pokemonInfo{
+        width: 100px;
+        height: 205px;
+        background-color: rgba(214, 216, 212);
+        border: 3px solid black;
+        box-shadow: inset 0px 10px 15px 10px rgba(0, 0, 0, 0.6);
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 6px;
+    }
+
+
+    /* CONTROLS */
+
+    
+    .controlWrapper{
+        width:324px;
+        height: 103px;
+        margin-top:20px;
+
+    }
+    
+    .sticksWrapper{
+        width:84px;
+        height:84px;
+    }
+    
+    .stick1{
+        width:28px;
+        height:28px;
+        display: flex;
+    }
+    
+    .stick2{
+        width:28px;
+        height:28px;
+        background-color: rgb(63, 61, 72);
+        border-radius: 5px;
+        box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6), -2px 2px 3px rgba(0, 0, 0, 0.6);
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .stickCenter{
+        width:28px;
+        height:28px;
+        background-color: rgb(63, 61, 72);
+        border-radius: 5px;
+        box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.2);
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .stickImgCenter{
+        height:15px;
+        width:18px;
+    }
+
+    .img-stickCenter{
+        height: 100%;
+        width:100%;
+    }
+    
+    .stickImgUp{
+        height:18px;
+        width:18px;
+    }
+    
+    .img-stickUp{
+        width:100%;
+        height:100%;
+    }
+
+    .stickImgRight{
+        height:18px;
+        width:18px;
+        background-image: url('triangulo_right.png');
+    }
+
+    .img-stickRight{
+        width:100%;
+        height:100%;
+    }
+    
+    .stickImgLeft{
+        height:18px;
+        width:18px;
+        background-image: url('triangulo_left.png');
+    }
+    
+    .img-stickLeft{
+        width:100%;
+        height:100%;
+    }
+
+    .stickImgDown{
+        height:18px;
+        width:18px;
+        background-image: url('triangulo_down.png');
+    }
+
+    .img-stickDown{
+        width:100%;
+        height:100%;
+    }
+    
+    .buttonsWrapper{
+        width:85px;
+        height:85px;
+        margin-right: 10px;
+    }
+    
+    .buttonA{
+        width:36px;
+        height:37px;
+        position:absolute;
+        border-radius: 72px;
+        background-color: rgb(63, 61, 72);
+        bottom:0px;
+        box-shadow: 0px 2px 5px 2px rgba(0, 0, 0, 0.4);
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .buttonB{
+        width:36px;
+        height:37px;
+        position:absolute;
+        border-radius: 72px;
+        background-color: rgb(63, 61, 72);
+        top:20px;
+        right:0px;
+        box-shadow: 0px 2px 5px 2px rgba(0, 0, 0, 0.4);
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .imgButtonA{
+        width:8px;
+        height:8px;
+        margin-left:3px;
+        margin-bottom: 5px;
+        font-size: 12px;
+        background-color: #565656;
+        color: transparent;
+        text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.4);
+        -webkit-background-clip: text;
+           -moz-background-clip: text;
+                background-clip: text;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    
+    .imgButtonB{
+        width:8px;
+        height:8px;
+        margin-left:3px;
+        margin-bottom: 5px;
+        font-size: 12px;
+        background-color: #565656;
+        color: transparent;
+        text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.4);
+        -webkit-background-clip: text;
+           -moz-background-clip: text;
+                background-clip: text;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    
+    .controlOptionsWrapper{
+        width:123px;
+        height:56px;
+        position:absolute;
+        top:600px;
+        display:flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        justify-content: space-around;
+    }
+    
+    .startButton{
+        width:34px;
+        height:15px;
+        border-radius: 21px;
+        background-color: rgb(63, 61, 72);
+        box-shadow: 0px 2px 5px 2px rgba(0, 0, 0, 0.4);
+        margin-left:20px;
+        margin-bottom: 100px;
+    }
+    
+    .selectButton{
+        width:34px;
+        height:15px;
+        border-radius: 21px;
+        background-color: rgb(63, 61, 72);
+        box-shadow: 0px 2px 5px 2px rgba(0, 0, 0, 0.4);
+        margin-right:16px;
+        margin-bottom: 100px;
+    }
+
+    .pokemonList{
+        width: 108px;
+        height: 211px;
+        margin-right: 18px;
+        overflow-y: auto;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pokemon, .pokemonSearch{
+        display:block;
+        width:80%;
+        padding:5px;
+        background-color: rgb(235, 228, 45);
+        box-shadow: 0px 10px 15px 10px rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+        font-weight: bold;
+        font-size: 8px;
+    }
+
+    .pokemonPhoto{
+        width:80px;
+        height:80px;
+        margin-top: 10px;
+        background-color: rgb(234, 235, 233);
+        border: 1px solid black;
+        box-shadow:  0px 10px 15px 10px rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+    }
+    
+    .pokemonSprite{
+        width:100%;
+        height:100%;
+    }
+    
+    .pokemonText{
+        width:100px;
+        height:100px;
+        margin-top: 5px;
+        margin-left: 0px;
+    }
+    
+    .pokemonName{
+        font-size: 10px;
+        text-align: center;
+        font-weight: bolder;
+    }
+    
+    .pokemonTrue{
+        font-size: 5px;
+        display:flex;
+        margin-top: 5px;
+        margin-left: 5px;
+        flex-direction: column;
+        align-items:flex-start;
+    }
+
+    .boldProfile{
+        font-weight:bold; 
+        font-size:8px; 
+        border-bottom: 1px solid black; 
+        margin-top: 3px; 
+        width:75px; 
+        text-align:center; 
+    }
+
+    li{
+        margin-bottom:5px;
+    }
 }

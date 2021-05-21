@@ -13,11 +13,11 @@ for (let index = 1; index < 152; index++) {
     let contador = index
     pokemon[index] = document.getElementById("pokemon" + index)
     pokemon[index].addEventListener('click', () =>{
-        getPokemon(contador)
-    })
-}
+        getPokemon(contador);
+    });
+};
 
-// HTML Buttons
+// HTML Search Buttons
 
 pokemonSearch.addEventListener('click', () =>{
     searchInputWrapper.style.display = 'flex';
@@ -28,11 +28,9 @@ pokemonSearch.addEventListener('click', () =>{
 });
 
 searchButton.addEventListener('click', () => {
-    if(searchInput.value < 899 || searchInput.value > 0){
-        getPokemon(searchInput.value)
-        searchInputWrapper.style.display = 'none';
-    }
-})
+    getPokemon(searchInput.value)
+    searchInputWrapper.style.display = 'none';
+});
 
 // Bonus Functions
 
@@ -61,7 +59,7 @@ function getPokemon(id){
                 abilities: '',
                 sprite: poke.sprites.front_default,
                 moves: ''
-            }
+            };
             poke.types.forEach((type) => {
                 Bulbasaur.type = Bulbasaur.type + type.type.name + '. '
             })
@@ -70,7 +68,7 @@ function getPokemon(id){
             })
             for (let i = 0; i < poke.moves.length; i++) {
                 Bulbasaur.moves = Bulbasaur.moves + poke.moves[i].move.name + '. '
-                if(i === 15){
+                if(i === 12){
                     break;
                 }
             }
@@ -87,13 +85,12 @@ function printPokemonInfo(infoPokemon){
     const pokemonInfo = 
     `
     <h2 class="pokemonName">#${infoPokemon.id}. ${infoPokemon.name}</h2>
-    <p style="font-weight:bold; font-size:22px; border-bottom: 2px solid black; margin-top: 20px; width:260px; text-align:center; ">Profile</p>
+    <p class="boldProfile">Profile</p>
     <ul class="pokemonTrue">
-        <li><p style="font-weight:bold; display:inline;">Height:</p> ${infoPokemon.height}
-        <p style="font-weight:bold; display:inline;"> Weight:</p> ${infoPokemon.weight}</li>
-        <li><p style="font-weight:bold; display:inline;">Type: </p>${infoPokemon.type}</li>
-        <li><p style="font-weight:bold; display:inline;">Abilities: </p> ${infoPokemon.abilities}</li>
-        <li><p style="font-weight:bold; display:inline;">Moves: </p> ${infoPokemon.moves}</li>
+        <li><p class="boldInfo">Height: </p> ${infoPokemon.height} <p class="boldInfo"> Weight: </p> ${infoPokemon.weight}</li>
+        <li><p class="boldInfo">Type: </p>${infoPokemon.type}</li>
+        <li><p class="boldInfo">Abilities: </p> ${infoPokemon.abilities}</li>
+        <li><p class="boldInfo"">Moves: </p> ${infoPokemon.moves}</li>
     </ul>
     `
     pokemonText.innerHTML = pokemonInfo
